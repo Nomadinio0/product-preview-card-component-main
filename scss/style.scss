@@ -1,0 +1,139 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.attribution {
+	padding: 20px 0;
+	font-size: 11px;
+	text-align: center;
+
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+
+body {
+	font-size: 14px;
+	background-color: hsl(30, 38%, 92%);
+	font-family: 'Montserrat', sans-serif;
+	color: hsl(228, 12%, 48%);
+}
+
+.product {
+	margin: 30px 15px;
+	background-color: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+
+	&__image {
+		background-image: url('/images/image-product-mobile.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 35vh;
+	}
+
+	&__info {
+		padding: 25px;
+
+		.heading {
+			margin-bottom: 15px;
+			font-family: 'Fraunces', serif;
+			color: hsl(212, 21%, 14%);
+		}
+
+		&-category {
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			font-size: 12px;
+		}
+
+		&-desc {
+			margin-bottom: 20px;
+			line-height: 24px;
+		}
+
+		&__price {
+			display: flex;
+			flex-wrap: wrap;
+			margin-bottom: 15px;
+
+			&-new {
+				// width: 50%;
+				margin-right: 25px;
+				font-family: 'Fraunces', serif;
+				font-size: 32px;
+				color: hsl(158, 36%, 37%);
+			}
+
+			&-old {
+				display: flex;
+				align-items: center;
+				font-family: 'Montserrat', sans-serif;
+				text-decoration-line: line-through;
+			}
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 50px;
+		border: none;
+		border-radius: 10px;
+		background-color: hsl(158, 36%, 37%);
+		color: #fff;
+		font-family: 'Montserrat', sans-serif;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:active {
+			background-color: hsl(158, 37%, 24%);
+		}
+
+		svg {
+			margin-right: 10px;
+			text-align: center;
+		}
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	body {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.product {
+		display: flex;
+		flex-direction: row;
+		width: 600px;
+		height: 450px;
+
+		.box {
+			width: 50%;
+			height: auto;
+		}
+
+		&__image {
+			background-image: url('/images/image-product-desktop.jpg');
+		}
+
+		&__info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 30px;
+		}
+	}
+}
